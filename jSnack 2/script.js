@@ -16,8 +16,13 @@
 var somma = 0;
 var i = 0 ;
 while(  i < 5 ){
-  var numeroUtente = parseInt(prompt('Inserisci un numero'));
-  somma= somma + numeroUtente
+  var numeroUtente = prompt('Inserisci un numero');
+  if (isNaN(numeroUtente) || numeroUtente = ' '){
+    numeroUtente = prompt('Inserisci un numero');
+  } else if (!isNaN(numeroUtente)){
+    paerseInt(numeroUtente);
+    somma= somma + numeroUtente
+  }
    i++
   }
 // STAMPARE LA SOMMA DI TUTTI I NUMERI
